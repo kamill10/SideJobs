@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ShowContactActivity">
+    tools:context=".ShowJobOffers">
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show Contacts"
+        android:text="Job Offers"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvShowContacts"
+        android:id="@+id/rvShowJobs"
         android:layout_width="409dp"
         android:layout_height="710dp"
         android:layout_marginStart="1dp"

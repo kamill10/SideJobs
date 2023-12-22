@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tnHello"
+        android:id="@+id/tnJobDetails"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -29,7 +29,7 @@
         android:text="First Name"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tnHello" />
+        app:layout_constraintTop_toBottomOf="@+id/tnJobDetails" />
 
     <EditText
         android:id="@+id/etPersonName"
@@ -40,8 +40,9 @@
         android:minHeight="48dp"
         android:text="Name"
         app:layout_constraintBottom_toBottomOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="@+id/tnHello"
-        app:layout_constraintTop_toTopOf="@+id/textView" />
+        app:layout_constraintEnd_toEndOf="@+id/tnJobDetails"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.428" />
 
     <TextView
         android:id="@+id/textView2"

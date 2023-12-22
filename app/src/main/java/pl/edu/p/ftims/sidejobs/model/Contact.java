@@ -1,4 +1,4 @@
-package pl.edu.p.ftims.cudownaapkaczw1030.model;
+package pl.edu.p.ftims.sidejobs.model;
 
 public class Contact {
 

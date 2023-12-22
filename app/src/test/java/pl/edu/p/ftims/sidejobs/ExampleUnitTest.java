@@ -1,4 +1,4 @@
-package pl.edu.p.ftims.cudownaapkaczw1030;
+package pl.edu.p.ftims.sidejobs;
 
 import org.junit.Test;
 

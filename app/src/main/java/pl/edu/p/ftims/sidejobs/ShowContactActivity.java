@@ -1,4 +1,4 @@
-package pl.edu.p.ftims.cudownaapkaczw1030;
+package pl.edu.p.ftims.sidejobs;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,7 +10,7 @@ import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
-import pl.edu.p.ftims.cudownaapkaczw1030.model.Contact;
+import pl.edu.p.ftims.sidejobs.model.Contact;
 
 public class ShowContactActivity extends AppCompatActivity {
 FirebaseFirestore db;

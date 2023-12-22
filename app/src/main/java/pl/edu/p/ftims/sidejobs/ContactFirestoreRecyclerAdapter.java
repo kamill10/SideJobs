@@ -1,4 +1,4 @@
-package pl.edu.p.ftims.cudownaapkaczw1030;
+package pl.edu.p.ftims.sidejobs;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
-import pl.edu.p.ftims.cudownaapkaczw1030.model.Contact;
+import pl.edu.p.ftims.sidejobs.model.Contact;
 
 public class ContactFirestoreRecyclerAdapter extends FirestoreRecyclerAdapter<Contact, ContactViewHolder> {
     /**

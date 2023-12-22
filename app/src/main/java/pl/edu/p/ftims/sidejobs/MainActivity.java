@@ -1,4 +1,4 @@
-package pl.edu.p.ftims.cudownaapkaczw1030;
+package pl.edu.p.ftims.sidejobs;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,7 +20,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import pl.edu.p.ftims.cudownaapkaczw1030.model.Contact;
+import pl.edu.p.ftims.sidejobs.model.Contact;
 
 public class MainActivity extends AppCompatActivity {
     EditText etPersonName;

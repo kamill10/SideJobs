@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'pl.edu.p.ftims.cudownaapkaczw1030'
+    namespace 'pl.edu.p.ftims.sidejobs'
     compileSdk 34
 
     defaultConfig {
-        applicationId "pl.edu.p.ftims.cudownaapkaczw1030"
+        applicationId "pl.edu.p.ftims.sidejobs"
         minSdk 23
         targetSdk 34
         versionCode 1

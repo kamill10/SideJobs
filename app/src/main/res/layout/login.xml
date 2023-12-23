@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    tools:ignore="ExtraText">
+    tools:ignore="ExtraText"
+    tools:context=".LoginActivity">
 
     <Button
         android:id="@+id/buttonLogin"
@@ -29,6 +30,7 @@
         android:layout_marginTop="276dp"
         android:layout_marginEnd="116dp"
         android:ems="10"
+        android:minHeight="48dp"
         android:hint="Login"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,6 +43,7 @@
         android:layout_marginTop="82dp"
         android:layout_marginEnd="116dp"
         android:ems="10"
+        android:minHeight="48dp"
         android:hint="Hasło"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"

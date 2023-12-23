@@ -9,10 +9,13 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CudownaApkaCzw1030"
+        android:theme="@style/Theme.SideJobs"
         tools:targetApi="31">
         <activity
-            android:name=".ShowContactActivity"
+            android:name=".ShowJobOffersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ShowAddJobActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

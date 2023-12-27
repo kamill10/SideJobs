@@ -35,7 +35,7 @@ public class RegistrationActivity extends AppCompatActivity {
         // initialising all views through id defined above
         emailTextView = findViewById(R.id.etEmailRegister);
         passwordTextView = findViewById(R.id.etPasswordRegister);
-        Btn = findViewById(R.id.etRegister);
+        Btn = findViewById(R.id.buttonRegister);
 
         // Set on Click Listener on Registration button
         Btn.setOnClickListener(new View.OnClickListener() {

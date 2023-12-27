@@ -31,7 +31,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tnJobDetails" />
 
     <TextView
-        android:id="@+id/tVjobName"
+        android:id="@+id/etJobName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -52,7 +52,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <TextView
-        android:id="@+id/tVJobDesc"
+        android:id="@+id/etJobDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
@@ -60,7 +60,7 @@
         android:ems="10"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tVjobName" />
+        app:layout_constraintTop_toTopOf="@+id/etJobName" />
 
     <TextView
         android:id="@+id/textViewRequiredAge"
@@ -73,7 +73,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <TextView
-        android:id="@+id/tVRequiredAge"
+        android:id="@+id/etRequiredAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
@@ -81,7 +81,7 @@
         android:ems="10"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tVJobDesc" />
+        app:layout_constraintTop_toTopOf="@+id/etJobDesc" />
 
     <TextView
         android:id="@+id/textViewExperience"
@@ -94,7 +94,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewRequiredAge" />
 
     <TextView
-        android:id="@+id/tVRequiredExperience"
+        android:id="@+id/etRequiredExperience"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -114,7 +114,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewExperience" />
 
     <TextView
-        android:id="@+id/tVHourlyRate"
+        android:id="@+id/etHourlyRate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
@@ -122,15 +122,15 @@
         android:ems="10"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tVRequiredExperience" />
+        app:layout_constraintTop_toTopOf="@+id/etRequiredExperience" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/jobAddButton"
         android:layout_width="match_parent"
         android:layout_height="83dp"
         android:layout_marginTop="50dp"
         android:text="Aplikuj"
-        app:layout_constraintTop_toBottomOf="@+id/tVHourlyRate"
+        app:layout_constraintTop_toBottomOf="@+id/etHourlyRate"
         tools:layout_editor_absoluteX="0dp" />
 
 

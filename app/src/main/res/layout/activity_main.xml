@@ -5,9 +5,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <Button
-        android:id="@+id/btnEmplyeer"
+        android:id="@+id/btnEmployer"
         android:layout_width="match_parent"
         android:layout_height="112dp"
         android:layout_marginTop="204dp"
@@ -17,8 +16,17 @@
         android:id="@+id/btnEmployee"
         android:layout_width="match_parent"
         android:layout_height="112dp"
-        android:layout_below="@id/btnEmplyeer"
+        android:layout_below="@id/btnEmployer"
         android:layout_marginTop="104dp"
         android:text="Pracownik" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Jestes pracownikiem czy pracodowcą?"
+        android:textAlignment="center"
+        android:textColor="@color/teal_700"
+        android:textSize="34sp" />
 
 </RelativeLayout>

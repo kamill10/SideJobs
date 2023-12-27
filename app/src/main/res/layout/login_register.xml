@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".RegisterOrLoginActivity">
 
     <Button
-        android:id="@+id/btnEmplyee"
+        android:id="@+id/btnEmployer"
         android:layout_width="match_parent"
         android:layout_height="112dp"
         android:layout_marginTop="204dp"
-        android:text="Register" />
+        android:text="Rejestracja" />
 
     <Button
-        android:id="@+id/btnEmployeer"
+        android:id="@+id/btnEmployee"
         android:layout_width="match_parent"
         android:layout_height="112dp"
-        android:layout_below="@id/btnEmplyee"
+        android:layout_below="@id/btnEmployer"
         android:layout_marginTop="104dp"
-        android:text="Login" />
+        android:text="Logowanie" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Zaloguj się lub zarejestruj"
+        android:textAlignment="center" />
 
 </RelativeLayout>

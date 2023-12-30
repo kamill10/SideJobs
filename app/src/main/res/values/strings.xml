@@ -8,4 +8,5 @@
     <string name="wymagane_do_wiadczenie">Wymagane doświadczenie</string>
     <string name="p_aca_godzinowa">Płaca godzinowa</string>
     <string name="aplikuj">Aplikuj</string>
+    <string name="sign_out">Sign Out</string>
 </resources>

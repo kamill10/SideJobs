@@ -24,7 +24,7 @@ import java.util.UUID;
 import pl.edu.p.ftims.sidejobs.model.JobOffer;
 
 
-public class ShowAddJobActivity extends AppCompatActivity {
+public class ShowAddJobActivity extends BaseActivity {
     private Button addJobButton;
     private EditText jobNameTextView, jobDescTextView,requiredAgeTextView,requiredExperienceTextView,hourlyPayTextView,numberOfPlacesTextView;
     FirebaseFirestore db = FirebaseFirestore.getInstance();

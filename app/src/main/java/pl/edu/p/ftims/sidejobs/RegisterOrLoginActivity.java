@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class RegisterOrLoginActivity extends AppCompatActivity {
+public class RegisterOrLoginActivity extends BaseActivity {
     private Button loginButton ;
     private Button registerButton ;
     @Override

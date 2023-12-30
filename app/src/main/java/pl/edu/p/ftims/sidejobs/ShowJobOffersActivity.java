@@ -13,7 +13,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
-public class ShowJobOffersActivity extends AppCompatActivity {
+public class ShowJobOffersActivity extends BaseActivity {
     private FirebaseFirestore db;
     private CollectionReference jobOffersCollection;
 

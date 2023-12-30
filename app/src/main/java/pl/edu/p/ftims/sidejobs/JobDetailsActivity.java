@@ -13,7 +13,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import pl.edu.p.ftims.sidejobs.R;
 
-public class JobDetailsActivity extends AppCompatActivity {
+public class JobDetailsActivity extends BaseActivity {
 
     private FirebaseFirestore db;
 

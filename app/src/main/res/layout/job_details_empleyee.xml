@@ -13,7 +13,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
-        android:text="Szczegóły pracy"
+        android:text="@string/szczeg_y_pracy"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="36dp"
-        android:text="Nazwa"
+        android:text="@string/nazwa"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tnJobDetails" />
 
@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="58dp"
-        android:text="Opis pracy"
+        android:text="@string/opis_pracy"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -68,7 +68,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="58dp"
-        android:text="Wymagany wiek"
+        android:text="@string/wymagany_wiek"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -89,7 +89,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="64dp"
-        android:text="Wymagane doświadczenie"
+        android:text="@string/wymagane_do_wiadczenie"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewRequiredAge" />
 
@@ -109,7 +109,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="64dp"
-        android:text="Płaca godzinowa"
+        android:text="@string/p_aca_godzinowa"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewExperience" />
 
@@ -129,7 +129,7 @@
         android:layout_width="match_parent"
         android:layout_height="83dp"
         android:layout_marginTop="50dp"
-        android:text="Aplikuj"
+        android:text="@string/aplikuj"
         app:layout_constraintTop_toBottomOf="@+id/etHourlyRate"
         tools:layout_editor_absoluteX="0dp" />
 

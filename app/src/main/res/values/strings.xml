@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Side Jobs</string>
+    <string name="job_offers">Job Offers</string>
+    <string name="szczeg_y_pracy">Szczegóły pracy</string>
+    <string name="nazwa">Nazwa</string>
+    <string name="opis_pracy">Opis pracy</string>
+    <string name="wymagany_wiek">Wymagany wiek</string>
+    <string name="wymagane_do_wiadczenie">Wymagane doświadczenie</string>
+    <string name="p_aca_godzinowa">Płaca godzinowa</string>
+    <string name="aplikuj">Aplikuj</string>
 </resources>

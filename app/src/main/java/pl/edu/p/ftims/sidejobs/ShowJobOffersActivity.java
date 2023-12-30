@@ -3,6 +3,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -26,8 +27,36 @@ public class ShowJobOffersActivity extends BaseActivity {
         db = FirebaseFirestore.getInstance();
         jobOffersCollection = db.collection("job_offers");
 
-        // Call method to fetch and display job offers
+        Button btnSortAlphabetically = findViewById(R.id.btnSortAlphabetically);
+
+        // Set an OnClickListener to handle sorting
+        btnSortAlphabetically.setOnClickListener(v -> {
+            // Call method to fetch and display job offers with alphabetical sorting
+            onSortAlphabeticallyClick();
+        });
+
+        // Call method to fetch and display job offers initially
         fetchAndDisplayJobOffers();
+    }
+
+    private void onSortAlphabeticallyClick() {
+        jobOffersCollection.orderBy("jobName").get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                // Handle successful data retrieval
+                QuerySnapshot querySnapshot = task.getResult();
+                if (querySnapshot != null) {
+                    LinearLayout llShowJobs = findViewById(R.id.llShowJobs);
+                    llShowJobs.removeAllViews(); // Clear existing views
+
+                    for (QueryDocumentSnapshot document : querySnapshot) {
+                        String jobName = document.getString("jobName");
+                        addJobNameToLayout(jobName, document.getId());
+                    }
+                }
+            } else {
+                // Handle failed data retrieval
+            }
+        });
     }
 
     private void fetchAndDisplayJobOffers() {

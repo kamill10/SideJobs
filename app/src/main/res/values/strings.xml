@@ -9,4 +9,6 @@
     <string name="p_aca_godzinowa">Płaca godzinowa</string>
     <string name="aplikuj">Aplikuj</string>
     <string name="sign_out">Sign Out</string>
+    <string name="number_of_places">Ilość miejsc</string>
+    <string name="posortuj_alfabetycznie">Posortuj alfabetycznie</string>
 </resources>

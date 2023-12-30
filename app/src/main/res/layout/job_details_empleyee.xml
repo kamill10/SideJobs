@@ -125,14 +125,37 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/etRequiredExperience" />
 
+    <TextView
+        android:id="@+id/etAvailablePlaces"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etHourlyRate" />
+
+    <TextView
+        android:id="@+id/textViewNumberOfPlaces"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:text="Ilość miejsc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHourlyRate" />
+
     <Button
         android:id="@+id/jobAddButton"
         android:layout_width="match_parent"
         android:layout_height="83dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="116dp"
         android:text="@string/aplikuj"
-        app:layout_constraintTop_toBottomOf="@+id/etHourlyRate"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintTop_toTopOf="@+id/etAvailablePlaces"
+        tools:layout_editor_absoluteX="16dp" />
+
+
 
 
 

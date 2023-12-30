@@ -27,6 +27,9 @@
             android:name=".RegistrationActivity"
             android:exported="false" />
         <activity
+            android:name=".JobDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

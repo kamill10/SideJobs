@@ -1,24 +1,18 @@
-package pl.edu.p.ftims.sidejobs;
-
-// Import necessary packages
+package pl.edu.p.ftims.sidejobs;// Import necessary packages
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
-import java.util.ArrayList;
-import java.util.List;
-
-// Inside ShowJobOffersActivity class
 public class ShowJobOffersActivity extends AppCompatActivity {
     private FirebaseFirestore db;
     private CollectionReference jobOffersCollection;
@@ -48,7 +42,7 @@ public class ShowJobOffersActivity extends AppCompatActivity {
                     for (QueryDocumentSnapshot document : querySnapshot) {
                         // Access jobName field and add it to the LinearLayout
                         String jobName = document.getString("jobName");
-                        addJobNameToLayout(jobName);
+                        addJobNameToLayout(jobName, document.getId()); // Pass job document ID
                     }
                 }
             } else {
@@ -57,7 +51,7 @@ public class ShowJobOffersActivity extends AppCompatActivity {
         });
     }
 
-    private void addJobNameToLayout(String jobName) {
+    private void addJobNameToLayout(String jobName, String jobId) {
         TextView textViewJobName = new TextView(this);
         textViewJobName.setText(jobName);
 
@@ -65,6 +59,16 @@ public class ShowJobOffersActivity extends AppCompatActivity {
         float textSizeInSp = 20; // Adjust the value as needed
         textViewJobName.setTextSize(textSizeInSp);
         textViewJobName.setPadding(8, 0, 8, 24);
+
+        // Set OnClickListener to navigate to job details
+        textViewJobName.setOnClickListener(v -> {
+            // Create an Intent to start JobDetailsEmployeeActivity
+            Intent intent = new Intent(ShowJobOffersActivity.this, JobDetailsActivity.class);
+            // Pass the job document ID as an extra
+            intent.putExtra("jobId", jobId);
+            startActivity(intent);
+        });
+
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT
@@ -75,6 +79,4 @@ public class ShowJobOffersActivity extends AppCompatActivity {
         LinearLayout llShowJobs = findViewById(R.id.llShowJobs);
         llShowJobs.addView(textViewJobName);
     }
-
 }
-

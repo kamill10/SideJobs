@@ -105,7 +105,7 @@ public class JobDetailsActivity extends BaseActivity {
                                                     String  employerID = updatedDocument.getString("userID");
                                                     String employeeID =  FirebaseAuth.getInstance().getCurrentUser().getUid();
                                                     String  jobID = updatedDocument.getString("jobID");
-                                                    saveJobApplicationToDatabase(employerID,employeeID,jobID);
+                                                    saveJobApplicationToDatabase(employerID,employeeID,jobID, FirebaseAuth.getInstance().getCurrentUser().getEmail());
 
                                                     // Update UI elements with updated job details
                                                     etJobName.setText(updatedJobName);
@@ -138,14 +138,15 @@ public class JobDetailsActivity extends BaseActivity {
             });
         }
     }
-    private void saveJobApplicationToDatabase(String  employerID,String employeeID,String jobID){
-        JobApplication jobApplication = new JobApplication(employerID,employeeID,jobID);
+    private void saveJobApplicationToDatabase(String  employerID,String employeeID,String jobID, String employeeMail){
+        JobApplication jobApplication = new JobApplication(employerID,employeeID,jobID, employeeMail);
         jobApplication.setApplicationID(UUID.randomUUID().toString());
         CollectionReference jobOffersCollection = db.collection("job_applications");
         Map<String, Object> jobOfferMap = new HashMap<>();
         jobOfferMap.put("jobApplicationId", jobApplication.getApplicationID().toString());
         jobOfferMap.put("jobOfferId", jobApplication.getJobOfferId().toString());
         jobOfferMap.put("employeeId", jobApplication.getEmployeeId().toString());
+        jobOfferMap.put("employeeMail", jobApplication.getEmployeeMail().toString());
         jobOfferMap.put("employerId", jobApplication.getEmployerId().toString());
         jobOffersCollection.document(jobApplication.getApplicationID().toString()).set(jobOfferMap)
                 .addOnFailureListener(e -> {

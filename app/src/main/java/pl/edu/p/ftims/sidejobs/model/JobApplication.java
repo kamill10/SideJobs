@@ -8,10 +8,17 @@ public class JobApplication {
     private String jobOfferId;
     private String applicationID;
 
-    public JobApplication(String employerId, String employeeId, String jobOfferId) {
+    private String employeeMail;
+
+    public String getEmployeeMail() {
+        return employeeMail;
+    }
+
+    public JobApplication(String employerId, String employeeId, String jobOfferId, String employeeMail) {
         this.employerId = employerId;
         this.employeeId = employeeId;
         this.jobOfferId = jobOfferId;
+        this.employeeMail = employeeMail;
     }
 
     public void setApplicationID(String applicationID) {

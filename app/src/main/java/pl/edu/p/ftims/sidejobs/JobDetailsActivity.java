@@ -1,5 +1,6 @@
 package pl.edu.p.ftims.sidejobs;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,11 +13,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
+
 import pl.edu.p.ftims.sidejobs.R;
+import pl.edu.p.ftims.sidejobs.model.JobApplication;
 
 public class JobDetailsActivity extends BaseActivity {
 
@@ -94,6 +102,10 @@ public class JobDetailsActivity extends BaseActivity {
                                                     String updatedRequiredExperience = updatedDocument.getString("requiredExperience");
                                                     String updatedHourlyPay = String.valueOf(updatedDocument.getLong("hourlyPay"));
                                                     String updatedNumberOfPlaces = String.valueOf(updatedDocument.getLong("numberOfAvailablePlaces"));
+                                                    String  employerID = updatedDocument.getString("userID");
+                                                    String employeeID =  FirebaseAuth.getInstance().getCurrentUser().getUid();
+                                                    String  jobID = updatedDocument.getString("jobID");
+                                                    saveJobApplicationToDatabase(employerID,employeeID,jobID);
 
                                                     // Update UI elements with updated job details
                                                     etJobName.setText(updatedJobName);
@@ -125,5 +137,24 @@ public class JobDetailsActivity extends BaseActivity {
                 }
             });
         }
+    }
+    private void saveJobApplicationToDatabase(String  employerID,String employeeID,String jobID){
+        JobApplication jobApplication = new JobApplication(employerID,employeeID,jobID);
+        jobApplication.setApplicationID(UUID.randomUUID().toString());
+        CollectionReference jobOffersCollection = db.collection("job_applications");
+        Map<String, Object> jobOfferMap = new HashMap<>();
+        jobOfferMap.put("jobApplicationId", jobApplication.getApplicationID().toString());
+        jobOfferMap.put("jobOfferId", jobApplication.getJobOfferId().toString());
+        jobOfferMap.put("employeeId", jobApplication.getEmployeeId().toString());
+        jobOfferMap.put("employerId", jobApplication.getEmployerId().toString());
+        jobOffersCollection.document(jobApplication.getApplicationID().toString()).set(jobOfferMap)
+                .addOnFailureListener(e -> {
+                    Toast.makeText(getApplicationContext(),
+                                    "Error in saving to database",
+                                    Toast.LENGTH_LONG)
+                            .show();
+                    Log.e("FirestoreError", "Error in saving to database", e);
+                });
+
     }
 }

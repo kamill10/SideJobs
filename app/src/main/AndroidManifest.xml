@@ -30,6 +30,12 @@
             android:name=".JobDetailsActivity"
             android:exported="false" />
         <activity
+            android:name=".ShowEmployerApplicationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EmployerMainClass"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

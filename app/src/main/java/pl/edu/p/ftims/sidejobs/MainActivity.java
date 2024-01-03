@@ -20,7 +20,7 @@ public class MainActivity extends BaseActivity {
         employerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ShowAddJobActivity.class);
+                Intent intent = new Intent(getApplicationContext(), EmployerMainClass.class);
                 startActivity(intent);
             }
         });

@@ -4,7 +4,11 @@
 
     <item
         android:id="@+id/action_sign_out"
-        android:title="@string/sign_out"
+        android:title="Wyloguj się!"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/sign_in_menu_main"
+        android:title="Zaloguj się/Zarejestruj"
         app:showAsAction="always" />
 
 </menu>
